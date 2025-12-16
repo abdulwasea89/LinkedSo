@@ -15,6 +15,19 @@ const TRANSITION = {
   bounce: 0,
 }
 
+function deduplicateReasoning(reasoning: string): string {
+  const len = reasoning.length
+  if (len % 2 === 0) {
+    const half = len / 2
+    const first = reasoning.slice(0, half)
+    const second = reasoning.slice(half)
+    if (first === second) {
+      return first
+    }
+  }
+  return reasoning
+}
+
 export function Reasoning({ reasoning, isStreaming }: ReasoningProps) {
   const [wasStreaming, setWasStreaming] = useState(isStreaming ?? false)
   const [isExpanded, setIsExpanded] = useState(() => isStreaming ?? true)
@@ -23,6 +36,8 @@ export function Reasoning({ reasoning, isStreaming }: ReasoningProps) {
     setWasStreaming(false)
     setIsExpanded(false)
   }
+
+  const deduplicatedReasoning = deduplicateReasoning(reasoning)
 
   return (
     <div>
@@ -50,7 +65,7 @@ export function Reasoning({ reasoning, isStreaming }: ReasoningProps) {
             transition={TRANSITION}
           >
             <div className="text-muted-foreground border-muted-foreground/20 flex flex-col border-l pl-4 text-sm">
-              <Markdown>{reasoning}</Markdown>
+              <Markdown>{deduplicatedReasoning}</Markdown>
             </div>
           </motion.div>
         )}

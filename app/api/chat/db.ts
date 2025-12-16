@@ -36,13 +36,26 @@ export async function saveFinalAssistantMessage(
             })
           }
         } else if (part.type === "reasoning") {
+          const reasoningText = part.text || ""
+          // Deduplicate reasoning if it's repeated (first half = second half)
+          const deduplicatedText = (() => {
+            const len = reasoningText.length
+            if (len % 2 === 0) {
+              const half = len / 2
+              const first = reasoningText.slice(0, half)
+              const second = reasoningText.slice(half)
+              if (first === second) return first
+            }
+            return reasoningText
+          })()
+          
           parts.push({
             type: "reasoning",
-            reasoning: part.text || "",
+            reasoning: deduplicatedText,
             details: [
               {
                 type: "text",
-                text: part.text || "",
+                text: deduplicatedText,
               },
             ],
           })

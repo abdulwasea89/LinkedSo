@@ -501,14 +501,12 @@ export function useChatCore({
     reload(options)
   }, [user, chatId, selectedModel, isAuthenticated, systemPrompt, reload])
 
-  // Handle input change - now with access to the real setInput function!
-  const { setDraftValue } = useChatDraft(chatId)
+  // Handle input change
   const handleInputChange = useCallback(
     (value: string) => {
       setInput(value)
-      setDraftValue(value)
     },
-    [setInput, setDraftValue]
+    [setInput]
   )
 
   return {

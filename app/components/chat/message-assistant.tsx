@@ -50,7 +50,12 @@ export function MessageAssistant({
     (part) => part.type === "tool-invocation"
   )
   const reasoningParts = parts?.find((part) => part.type === "reasoning")
-  const contentNullOrEmpty = children === null || children === ""
+
+  // Remove reasoning from content if it's already in parts to avoid duplication
+  const filteredChildren = reasoningParts?.reasoning
+    ? children.replace(reasoningParts.reasoning, "").trim()
+    : children
+  const contentNullOrEmpty = filteredChildren === null || filteredChildren === ""
   const isLastStreaming = status === "streaming" && isLast
   const searchImageResults =
     parts
@@ -124,7 +129,7 @@ export function MessageAssistant({
             )}
             markdown={true}
           >
-            {children}
+            {filteredChildren}
           </MessageContent>
         )}
 

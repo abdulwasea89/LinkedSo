@@ -1,0 +1,12 @@
+{
+	"servers": {
+		"my-mcp-server-0990572e": {
+			"type": "stdio",
+			"command": "npx",
+			"args": [
+				"@testsprite/testsprite-mcp@latest"
+			]
+		}
+	},
+	"inputs": []
+}

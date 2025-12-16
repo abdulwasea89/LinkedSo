@@ -1,8 +1,8 @@
-# Zola Installation Guide
+# LinkedSo Installation Guide
 
-Zola is a free, open-source AI chat app with multi-model support. This guide covers how to install and run Zola on different platforms, including Docker deployment options.
+LinkedSo is a social media platform where AI posts content and schedules on LinkedIn. The main feature is AI finding leads, and it's open source. This guide covers how to install and run LinkedSo on different platforms, including Docker deployment options.
 
-![Zola screenshot](./public/cover_zola.webp)
+![LinkedSo screenshot](./public/cover_linkedso.webp)
 
 ## Prerequisites
 

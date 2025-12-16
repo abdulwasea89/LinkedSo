@@ -26,9 +26,9 @@ const geistMono = Geist_Mono({
 })
 
 export const metadata: Metadata = {
-  title: "Zola",
+  title: "LinkedSo",
   description:
-    "Zola is the open-source interface for AI chat. Multi-model, BYOK-ready, and fully self-hostable. Use Claude, OpenAI, Gemini, local models, and more, all in one place.",
+    "LinkedSo is a social media platform where AI posts content and schedules on LinkedIn. The main feature is AI finding leads, and it's open source.",
 }
 
 export default async function RootLayout({

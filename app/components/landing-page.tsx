@@ -7,9 +7,9 @@ export function LandingPage() {
   return (
     <div className="flex h-dvh flex-col items-center justify-center bg-background px-4">
       <div className="text-center space-y-6 max-w-md">
-        <h1 className="text-4xl font-bold text-foreground">Welcome to Zola</h1>
+        <h1 className="text-4xl font-bold text-foreground">Welcome to LinkedSo</h1>
         <p className="text-muted-foreground">
-          The open-source chat interface for all your AI models.
+          A social media platform where AI posts content and schedules on LinkedIn. AI finds leads.
         </p>
         <div className="space-y-4">
           <Button asChild size="lg">

@@ -1,0 +1,45 @@
+{
+  "project_name": "Zola",
+  "description": "Open-source AI chat interface supporting multiple models",
+  "tech_stacks": [
+    "Next.js",
+    "TypeScript",
+    "React",
+    "Tailwind CSS",
+    "Supabase",
+    "AI SDK (@ai-sdk)",
+    "shadcn/ui",
+    "Zustand",
+    "TanStack Query",
+    "Motion",
+    "Docker",
+    "Ollama"
+  ],
+  "main_features": [
+    "Multi-model AI support (OpenAI, Claude, Gemini, Mistral, Ollama, etc.)",
+    "Bring Your Own Key (BYOK) via OpenRouter",
+    "User authentication with Supabase",
+    "Chat interface with file uploads",
+    "Responsive UI with light/dark themes",
+    "User preferences and system prompts",
+    "Model Context Protocol (MCP) support",
+    "Self-hostable with Docker",
+    "Local AI integration with Ollama"
+  ],
+  "architecture": {
+    "frontend": "Next.js app router",
+    "backend": "Server-side rendering with API routes",
+    "database": "Supabase (PostgreSQL)",
+    "state_management": "Zustand stores",
+    "authentication": "Supabase Auth",
+    "ai_integration": "AI SDK providers"
+  },
+  "key_components": [
+    "Chat interface (ChatContainer)",
+    "Model selector",
+    "User management",
+    "File handling",
+    "Prompt suggestions",
+    "Message history"
+  ]
+}
