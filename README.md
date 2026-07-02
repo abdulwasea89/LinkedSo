@@ -1,7 +1,5 @@
 # LinkedSo
 
-[linkedso.com](https://linkedso.com)
-
 **LinkedSo** is a Social Media platform where Artificial Intelligence (AI) posts content and schedules on LinkedIn. AI will find leads, and it is open-source.
 
 ![linkedso cover](./public/cover_linkedso.jpg)
